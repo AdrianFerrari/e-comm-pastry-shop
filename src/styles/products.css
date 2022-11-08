@@ -1,0 +1,89 @@
+/*****************
+Products Container
+******************/
+
+.products {
+    display: flex;
+    height: 100%;
+    width: 90%;
+    margin: auto;
+}
+
+.product-container {
+    margin: auto;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 1em;
+}
+
+.products-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 1em;
+}
+
+/*****************
+Product Element
+******************/
+
+.product {
+    background: rgb(219, 219, 182);
+    box-shadow: 1px 1px 5px black;
+    cursor: pointer;
+}
+
+.product-grid {
+    /*width: 40vw;*/
+    display:flex;
+    flex-direction: column;
+}
+
+.product-grid > img {
+    object-fit: cover;
+    width: 100%;
+    height: 70%;
+}
+
+.product-list {
+    display:flex;
+    flex-direction: row;
+    height: 40vw;
+}
+
+.product-list > img {
+    object-fit: cover;
+    width: 40%;
+    height: 100%;
+}
+
+.info-product-grid {
+    display:flex;
+    justify-content: space-between;
+    padding: 0 .2em;
+    align-items: flex-start;
+    font-size: 1.1em;
+}
+
+.info-product-list {
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: .4em .2em;
+    align-items: flex-start;
+    font-size: 1.1em;
+}
+
+.cost{
+    font-weight: bold;
+    color:rgb(25, 25, 94);
+}
+
+.description {
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
