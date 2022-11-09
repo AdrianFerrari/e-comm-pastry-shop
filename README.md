@@ -9,6 +9,8 @@ Proyecto solo de un e-commercio de tortas
 
 ## Screenshots
 
-<img src="./screenshot_home.png" width="300">|
-<img src="./screenshot_productos.png" width="300">|
-<img src="./screenshot_cart.png" width="300">|
+<p float="left">
+    <img src="./screenshot_home.png" width="300">
+    <img src="./screenshot_productos.png" width="300">
+    <img src="./screenshot_cart.png" width="300">
+</p>
