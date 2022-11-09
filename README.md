@@ -1,6 +1,6 @@
 # Pastry Shop App
 
-Proyecto solo de un e-commercio de tortas
+Proyecto de practica de un e-commercio de tortas
 
 ## Technologies used
 
