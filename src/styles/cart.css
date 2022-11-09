@@ -39,6 +39,10 @@
     width: 30%;
 }
 
+.cart-item h3 {
+    overflow: hidden;
+}
+
 .cart-cost {
     display: flex;
     justify-content: space-between;

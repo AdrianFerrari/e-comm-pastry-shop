@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { add } from '../redux-store/cartSlice'
@@ -16,6 +16,10 @@ function SingleProduct() {
     function addToCart(){
         dispatch(add(item))
     }
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+      }, [])
 
     return (
         <div className='single-page-container'>
