@@ -1,18 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
 import '../styles/cart.css'
 import CartProduct from './CartProduct'
 import { useDispatch, useSelector } from 'react-redux'
-import { remove } from '../redux-store/productSlice'
+import { remove } from '../redux-store/cartSlice'
+import { useNavigate } from 'react-router-dom'
 
 function Cart() {
     const cartItems = useSelector(state => state.cart)
     const dispatch = useDispatch()
-    const cartI = useSelector(state => state.cart)
+    const navigate = useNavigate()
 
     function removeFromCart(id){
         dispatch(remove(id))
     }
-    console.log(cartI)
 
     const cartHTML = cartItems.map((item, i) => {
         return(
@@ -26,11 +26,14 @@ function Cart() {
                     </div>
 
     return (
+        <>
+        <button className="go-back-arrow" onClick={()=>navigate(-1)}>&#11013; Go back</button>
         <div className='cart'>
             {cartHTML}
         <hr/>
             {costSum}
         </div>
+        </>
     )
 }
 

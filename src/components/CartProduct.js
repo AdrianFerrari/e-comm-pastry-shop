@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import '../styles/cart.css'
+import PropTypes from 'prop-types'
+
+/*eslint no-undef: "error"*/
+/*eslint-env node*/
 
 function CartProduct({imgName, title, id, cost, removeFromCart}) {
     const [isHover, setHover] = useState(false)
@@ -18,6 +22,14 @@ function CartProduct({imgName, title, id, cost, removeFromCart}) {
                 <p>${cost}</p>
         </div>
     )
+}
+
+CartProduct.propTypes = {
+    imgName: PropTypes.string,
+    title: PropTypes.string,
+    cost: PropTypes.number,
+    id: PropTypes.number,
+    removeFromCart: PropTypes.func
 }
 
 export default CartProduct

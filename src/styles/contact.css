@@ -1,0 +1,22 @@
+.contact {
+    min-height: 100vh;
+    background: beige;
+    overflow: auto;
+    font-size: 1.4em;
+}
+
+.contact-card {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    color: rgb(77, 57, 32);
+    gap: .5em;
+}
+
+.contact hr {
+    border: 1px solid rgb(77, 57, 32);
+}
+
+.contact i {
+    cursor: pointer;
+}
