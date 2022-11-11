@@ -27,10 +27,10 @@ header span {
     background: rgb(218, 218, 161);
     display: flex;
     justify-content: center;
-    gap:10%;
+    gap: 10%;
     padding: .5em;
     font-size: 1.5em;
-    color:rgb(77, 57, 32);
+    color: rgb(77, 57, 32);
     position: relative;
 }
 
