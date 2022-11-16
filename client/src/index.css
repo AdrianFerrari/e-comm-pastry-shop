@@ -1,0 +1,35 @@
+*,
+::after,
+::before {
+    margin: 0;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    color: rgb(56, 51, 3);
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+[class^="ri-"],
+[class*=" ri-"] {
+    font-size: 2rem;
+}

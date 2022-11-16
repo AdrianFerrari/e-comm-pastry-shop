@@ -1,0 +1,27 @@
+.footer {
+    background-color: rgb(77, 57, 32);
+    color: beige;
+    height: 20vh;
+    width: 100%;
+    font-size: 1em;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footer-info{
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-info h1 {
+    font-size: 1.5rem;
+    color: beige;
+}
+
+@media (max-width: 580px) {
+    .footer-info h1 {
+        font-size: 1rem;
+    }
+}
