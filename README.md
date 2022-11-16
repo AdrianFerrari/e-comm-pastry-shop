@@ -6,6 +6,8 @@ Proyecto de practica de un e-commercio de tortas
 
 - React-Redux
 - React-Reuter
+- Express
+- Nodejs
 
 ## Screenshots
 
