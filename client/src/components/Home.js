@@ -19,7 +19,7 @@ function Home() {
 
   return (
     <div className="home" style={{backgroundImage:'url(../images/background_bakery.jpg)', backgroundRepeat: 'repeat', backgroundSize: '50%'}}>
-      <section className="home-section-1">
+      <section className="home-section-1" style={{backgroundImage:'url(../images/bakery3.jpg)', backgroundSize: 'cover'}}>
         <div className="home-info">
           <h1>Tu Pasteleria</h1>
           <p className="home-introduction">

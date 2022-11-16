@@ -21,7 +21,6 @@ Seccion 1 - Informacion
 }
 
 .home-section-1 img {
-    
     aspect-ratio: 1 / 1;
     position: absolute;
     object-fit: cover;
@@ -29,44 +28,31 @@ Seccion 1 - Informacion
 }
 
 .bakery1 {
-    top: 5%;
-    right: 5%;
-    z-index: 2;
-    height: 30vh;
-    animation: 1.2s ease-out slideIn;
-    animation-iteration-count: 1
+    display:none;
 }
 
 .bakery2 {
-    top: 30%;
-    right: 25%;
-    z-index: 3;
-    height: 20vh;
-    animation: 1s ease-out slideIn;
-    animation-iteration-count: 1
+    display: none;
 }
 
 .bakery3 {
-    top: 55%;
-    right: 5%;
-    z-index: 4;
-    height: 30vh;
-    animation: 1.1s ease-out slideIn;
-    animation-iteration-count: 1
+    display: none;
 }
 
 .home-info {
-    color: rgb(56, 51, 3);
+    color: beige;
     width: 50vw;
     z-index: 10;
-    background-color: beige;
     position: absolute;
+    padding: 1em;
     margin: 20% auto auto 1rem;
-    border-bottom: 1px solid rgb(56, 51, 3);
-    border-right: 1px solid rgb(56, 51, 3);
     animation: .5s ease-out fadeIn;
     animation-iteration-count: 1;
-    background: rgb(218, 218, 161);
+    backdrop-filter: blur(10px);
+}
+
+.home-info h1 {
+    color: beige;
 }
 
 @keyframes fadeIn {
@@ -85,7 +71,6 @@ Seccion 1 - Informacion
     }
     100% {
         opacity: 1;
-        transform: translateX(0);
     }
 }
 
@@ -169,5 +154,41 @@ Media Queries
 
     .home-section-3 {
         width: 900px;
+    }
+}
+
+@media (min-width: 570px) {
+    .home-section-1 {
+        background-image: none;
+    }
+
+    .bakery1 {
+        display: block;
+        top: 5%;
+        right: 5%;
+        z-index: 2;
+        height: 30vh;
+        animation: 1.2s ease-out slideIn;
+        animation-iteration-count: 1
+    }
+    
+    .bakery2 {
+        display: block;
+        top: 20%;
+        right: 20%;
+        z-index: 1;
+        height: 30vh;
+        animation: 1s ease-out slideIn;
+        animation-iteration-count: 1
+    }
+    
+    .bakery3 {
+        display: block;
+        top: 45%;
+        right: 25%;
+        z-index: 4;
+        height: 30vh;
+        animation: 1.1s ease-out slideIn;
+        animation-iteration-count: 1
     }
 }
