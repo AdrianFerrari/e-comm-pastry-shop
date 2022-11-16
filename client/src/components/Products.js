@@ -27,6 +27,12 @@ function Products() {
     setDisplayDropDownMenu(prevState => !prevState)
   }
 
+  function closeMenu() {
+    if(displayDropDownMenu){
+      setDisplayDropDownMenu(false)
+    }
+  }
+
   return (
     <main className="products">
       <div className="sidebar">
@@ -54,28 +60,33 @@ function Products() {
         <div className="top-menu">
           <div className="menu-container">
             <button onClick={displayDropDown} className="dropDown-button">{categoryName}&#128315;</button>
-            <div className="menu" style={{display: displayDropDownMenu ? "block" : "none"}}>
-              <ul>
-                <button onClick={filterProducts} name="all">
-                  All
-                </button>
-                <button onClick={filterProducts} name="chocolate">
-                  Chocolate
-                </button>
-                <button onClick={filterProducts} name="vainilla">
-                  Vainilla
-                </button>
-                <button onClick={filterProducts} name="manzana">
-                  Manzana
-                </button>
-                <button onClick={filterProducts} name="fruta">
-                  Fruta
-                </button>
-                <button onClick={filterProducts} name="cafe">
-                  Cafe
-                </button>
-              </ul>
-            </div>
+            {displayDropDownMenu && (
+              <>
+                <div className="back-menu" onClick={closeMenu}></div>
+                <div className="menu">
+                  <ul>
+                    <button onClick={filterProducts} name="all">
+                      All
+                    </button>
+                    <button onClick={filterProducts} name="chocolate">
+                      Chocolate
+                    </button>
+                    <button onClick={filterProducts} name="vainilla">
+                      Vainilla
+                    </button>
+                    <button onClick={filterProducts} name="manzana">
+                      Manzana
+                    </button>
+                    <button onClick={filterProducts} name="fruta">
+                      Fruta
+                    </button>
+                    <button onClick={filterProducts} name="cafe">
+                      Cafe
+                    </button>
+                  </ul>
+                </div>
+              </>
+            )}
           </div>
           <div className="display-buttons">
             <i

@@ -4,15 +4,17 @@ Products Container
 
 .products {
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
     width: 90%;
-    margin: auto;
+    margin: 0 auto;
     padding-bottom: 1em;
     padding-top: 1em;
-    
+    min-height: 100vh;
 }
 
 .product-container {
-    margin: auto;
+    margin: 0 auto;
 }
 
 .products-grid {
@@ -74,6 +76,15 @@ Products Container
 }
 
 /*Drop down menu*/
+
+.back-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
 
 .menu-container {
     position: relative;
@@ -151,7 +162,6 @@ Product Element
 }
 
 .product-grid {
-    /*width: 40vw;*/
     display:flex;
     flex-direction: column;
 }
@@ -270,6 +280,10 @@ Media
 
     .menu-container{
         visibility: hidden;
+    }
+
+    .products {
+        flex-direction: row;
     }
 
     .products > .sidebar {
