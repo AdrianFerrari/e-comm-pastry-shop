@@ -152,6 +152,10 @@ Product Element
     overflow: hidden;
 }
 
+.product h3 {
+    font-family: 'Dancing Script', cursive;
+}
+
 .product .image {
     transition: transform .2s;
     overflow: hidden;
@@ -229,6 +233,11 @@ Single Product Page
     flex-direction: column;
     width: 90%;
     margin: auto;
+}
+
+.single-product h3 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.8rem;
 }
 
 .single-product-info {
@@ -313,6 +322,14 @@ Media
 
     .single-product-button-2 {
         display: block;
+    }
+
+    .single-product h3 {
+        font-size: 2rem;
+    }
+
+    .product h3 {
+        font-size: 1.5rem;
     }
 }
 
