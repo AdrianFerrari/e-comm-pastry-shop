@@ -7,6 +7,7 @@ import PropTypes from "prop-types";
 
 function CartProduct({ imgName, title, id, cost, removeFromCart }) {
   const [isHover, setHover] = useState(false);
+  const urlImgPath = process.env.REACT_APP_URL + "images/" + imgName + ".jpg"
 
   return (
     <div className="cart-item">
@@ -14,7 +15,7 @@ function CartProduct({ imgName, title, id, cost, removeFromCart }) {
         <div
           className="image"
           style={{
-            backgroundImage: `url(../images/${imgName}.jpg)`,
+            backgroundImage: `url(${urlImgPath})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}

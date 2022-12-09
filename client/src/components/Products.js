@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/products.css";
 import Product from "./Product";
 import { useSelector, useDispatch } from "react-redux";
 import { filter } from "../redux-store/productSlice";
+import { useOutletContext } from "react-router-dom"
 
 function Products() {
   const [categoryName, setCategoryName] = useState("categories")
@@ -10,7 +11,8 @@ function Products() {
   const [displayDropDownMenu, setDisplayDropDownMenu] = useState(false)
   const cakesData = useSelector((state) => state.products);
   const dispatch = useDispatch();
-
+  const {setCurrentPage} = useOutletContext()
+  
   const productsHTML = cakesData.map((cake) => {
     return (
       <Product productDisplay={productDisplay} key={cake.id} cake={cake} />
@@ -32,6 +34,11 @@ function Products() {
       setDisplayDropDownMenu(false)
     }
   }
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setCurrentPage("products")
+}, []);
 
   return (
     <main className="products">

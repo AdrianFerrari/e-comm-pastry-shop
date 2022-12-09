@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
+import { useOutletContext } from "react-router-dom";
 import "../styles/contact.css";
 
 function Contact() {
+  const {setCurrentPage} = useOutletContext()
+
+  useEffect(() => {
+    setCurrentPage("contact")
+  }, [])
+
   return (
     <div className="contact">
       <div className="contact-card">

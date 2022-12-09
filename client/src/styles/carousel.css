@@ -1,0 +1,27 @@
+.carousel__slider {
+    height: 100%;
+    margin: 0 auto;
+}
+
+.carousel-img {
+    object-fit: cover;
+}
+
+.carousel__dot {
+    all: revert;
+    width: 50px;
+    margin: 0 10px;
+    background-color: beige;
+    border: 1px solid rgb(56, 51, 3);
+}
+
+.carousel__dot:disabled {
+    background-color: rgb(56, 51, 3);
+}
+
+.carousel__dot-group {
+    display: flex;
+    justify-content: center;
+    height: 10px;
+    margin: 10px auto;
+}

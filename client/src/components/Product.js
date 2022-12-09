@@ -6,6 +6,7 @@ import PropTypes from "prop-types";
 function Product(props) {
   const { imgName, title, description, cost, id } = props.cake;
   const isGrid = props.productDisplay === "grid";
+  const urlImgPath = process.env.REACT_APP_URL + "images/" + imgName + ".jpg"
 
   return (
     <Link
@@ -15,7 +16,7 @@ function Product(props) {
       <div
         className="image"
         style={{
-          backgroundImage: `url(../images/${imgName}.jpg)`,
+          backgroundImage: `url(${urlImgPath})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
         }}

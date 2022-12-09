@@ -285,6 +285,12 @@ Single Product Page
 Media
 ******************/
 
+@media (min-width:625px){
+    .products-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
 @media (min-width:900px){
 
     .menu-container{

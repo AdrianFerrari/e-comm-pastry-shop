@@ -2,7 +2,7 @@
   "count":15,
   "results":[
      {
-        "id":1,
+        "id":0,
         "title":"Amandine",
         "description":"Bizcocho en capas de chocolate relleno de chocolate, caramelo y crema fondant.",
         "cost":100,
@@ -13,7 +13,7 @@
         "imgName":"Amandine_cake"
      },
      {
-        "id":2,
+        "id":1,
         "title":"Torta de Angel",
         "description":"Un tipo de bizcocho en capas, a menudo adornado con crema y colorante para alimentos.",
         "cost":140,
@@ -24,7 +24,7 @@
         "imgName":"Angel_Slice"
      },
      {
-        "id":3,
+        "id":2,
         "title":"Torta de Manzana",
         "description":"Un pastel con manzanas, ocasionalmente cubierto con glaseado de caramelo.",
         "cost":100,
@@ -36,7 +36,7 @@
         "imgName":"Apple_cake"
      },
      {
-        "id":4,
+        "id":3,
         "title":"Babka",
         "description":"Un pastel dulce trenzado que se originó en las comunidades judías.",
         "cost":55,
@@ -48,7 +48,7 @@
         "imgName":"Babka"
      },
      {
-        "id":5,
+        "id":4,
         "title":"Torta de Banana",
         "description":"Un pastel con plátano como ingrediente principal.",
         "cost":60,
@@ -58,7 +58,7 @@
         "imgName":"Banana_cake"
      },
      {
-        "id":6,
+        "id":5,
         "title":"Chocolate Stout",
         "description":"Cualquier bizcocho preparado con cerveza como ingrediente principal; En la foto, un bizcocho de chocolate infundido con cerveza negra.",
         "cost":120,
@@ -69,7 +69,7 @@
         "imgName":"Chocolate_Stout"
      },
      {
-        "id":7,
+        "id":6,
         "title":"Selva Negra",
         "description":"Un pastel con cerezas, kirsch y chocolate. Por lo general, hay una capa inferior de masa quebrada de chocolate y dos capas de bizcocho de chocolate. Luego, el pastel se rellena con mermelada de cereza y crema batida.",
         "cost":200,
@@ -79,7 +79,7 @@
         "imgName":"Black_Forest"
      },
      {
-        "id":8,
+        "id":7,
         "title":"Torta de Queso",
         "description":"Un postre con una base delgada hecha de galletas trituradas y una capa superior más gruesa de queso blando, huevos y azúcar.",
         "cost":80,
@@ -89,7 +89,7 @@
         "imgName":"Cheesecake"
      },
      {
-        "id":9,
+        "id":8,
         "title":"Chocotorta",
         "description":"Un pastel hecho con galletas de chocolate, dulce de leche y queso crema.",
         "cost":105,
@@ -100,7 +100,7 @@
         "imgName":"Chocotorta"
      },
      {
-        "id":10,
+        "id":9,
         "title":"Coffe cake",
         "description":"Un pastel de una sola capa con sabor a canela y cubierto con una cobertura de migas, destinado a comerse con café.",
         "cost":50,
@@ -111,7 +111,7 @@
         "imgName":"Coffee_cake"
      },
      {
-        "id":11,
+        "id":10,
         "title":"Torta de frutas",
         "description":"Un rico bizcocho con frutas confitadas y especias; muchas versiones del pastel contienen grosellas, sultanas y cerezas glaseadas.",
         "cost":40,
@@ -121,7 +121,7 @@
         "imgName":"Fruitcake"
      },
      {
-        "id":12,
+        "id":11,
         "title":"Torta Dundee",
         "description":"Un pastel de frutas sin cerezas glaseadas cubierto con almendras.",
         "cost":80,
@@ -131,7 +131,7 @@
         "imgName":"Dundee_cake"
      },
      {
-        "id":13,
+        "id":12,
         "title":"Funnelcake",
         "description":"Una pasta choux con azúcar en polvo u otros aderezos, generalmente fruta.",
         "cost":98,
@@ -141,7 +141,7 @@
         "imgName":"funnel_cake"
      },
      {
-        "id":14,
+        "id":13,
         "title":"Torta de Ciruela",
         "description":"Pastel preparado con frutas ciruelas como ingredientes principales.",
         "cost":65,
@@ -151,7 +151,7 @@
         "imgName":"Plum_cake"
      },
      {
-        "id":15,
+        "id":14,
         "title":"Torta marbelada",
         "description":"Un pastel de mantequilla de vainilla, café o chocolate en el que dos masas de diferentes colores se mezclan para mostrar un patrón similar al mármol.",
         "cost":100,
