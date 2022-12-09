@@ -15,14 +15,11 @@ export default function Carousel() {
     // eslint-disable-next-line no-unused-vars
     const [shuffled, setShuffled] = useState([])
 
-    function urlImgPath(imgName) {
-        return process.env.REACT_APP_URL + "images/" + imgName + ".jpg";
-    }
 
     const slideHTML = shuffled.map((item, i) => {
         return (
             <Slide key={item.title} index={i}>
-                <Image className="carousel-img" src={urlImgPath(item.imgName)} />
+                <Image className="carousel-img" src={`../images/${item.imgName}.jpg`} />
             </Slide>
         );
     });

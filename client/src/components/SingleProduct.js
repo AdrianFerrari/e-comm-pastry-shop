@@ -10,7 +10,6 @@ function SingleProduct() {
     const dispatch = useDispatch();
     const product = useSelector((state) => state.products[paramId]);
     const { imgName, title, cost, description } = product;
-    const urlImgPath = process.env.REACT_APP_URL + "images/" + imgName + ".jpg"
     
     function addToCart() {
         dispatch(add(product));
@@ -27,7 +26,7 @@ function SingleProduct() {
             </button>
             <div className="single-product">
                 <div className="single-product-info">
-                    <img src={urlImgPath} alt="cake" />
+                    <img src={`../images/${imgName}.jpg`} alt="cake" />
                     <div className={`info-product-list`}>
                         <h3>{title}</h3>
                         <p className="cost">${cost}</p>

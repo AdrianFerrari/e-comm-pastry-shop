@@ -13,7 +13,7 @@ const app = express();
 app.use(compression())
 app.use(express.json())
 app.use(cors({origin: 'http://localhost:3000'}))
-app.use(express.static(path.join(__dirname, "client/build")));
+//app.use(express.static(path.join(__dirname, "client/build")));
 
 //routes
 app.get("/images/:name", (req, res) => {
@@ -26,9 +26,9 @@ app.get("/api/data", (req, res) => {
   res.json(data)
 });
 
-app.get("*", (req, res) => {
+/* app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build/index.html"));
-});
+}); */
 
 const port = process.env.PORT || 5000;
 app.listen(port);

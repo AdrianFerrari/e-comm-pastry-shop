@@ -17,18 +17,15 @@ function Home() {
   const swedishOnScreen = useObservador(chefRefSwedish)
   const monsterOnScreen = useObservador(chefRefMonster)
 
-  function urlImgPath(imgName) {
-    return process.env.REACT_APP_URL + "images/" + imgName + ".jpg"
-  }
 
   useEffect(() => {
     setCurrentPage("home")
   }, [])
 
   return (
-    <div className="home" style={{backgroundImage:`url(${urlImgPath("background_bakery")})`, backgroundRepeat: 'repeat', backgroundSize: '50%'}}>
+    <div className="home" style={{backgroundImage:`url("../images/background_bakery.jpg")`, backgroundRepeat: 'repeat', backgroundSize: '50%'}}>
 
-      <section className="home-section-1" style={{backgroundImage:`url(${urlImgPath("bakery3")})`, backgroundSize: 'cover'}}>
+      <section className="home-section-1" style={{backgroundImage:`url("../images/bakery3.jpg")`, backgroundSize: 'cover'}}>
         <div className="home-info">
           <h1>Tu Pasteleria</h1>
           <p className="home-introduction">
@@ -38,9 +35,9 @@ function Home() {
             aliquip ex ea commodo consequat.
           </p>
         </div>
-        <img className="bakery1" src={urlImgPath("chocolate-cake-1")} alt="bakery" />
-        <img className="bakery2" src={urlImgPath("chocolate-cake-2")} alt="bakery" />
-        <img className="bakery3" src={urlImgPath("lemon_rasberry")} alt="bakery" />
+        <img className="bakery1" src={"../images/chocolate-cake-1.jpg"} alt="bakery" />
+        <img className="bakery2" src={"../images/chocolate-cake-2.jpg"} alt="bakery" />
+        <img className="bakery3" src={"../images/lemon_rasberry.jpg"} alt="bakery" />
       </section>
 
       <section className="home-section-2">
