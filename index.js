@@ -22,6 +22,12 @@ app.get("/images/:name", (req, res) => {
   res.sendFile(imagePath)
 });
 
+app.get("/images/low_q/:name", (req, res) => {
+  const { name } = req.params
+  const imagePath = path.join(__dirname, "./images/low_q/" + name)
+  res.sendFile(imagePath)
+});
+
 app.get("/api/data", (req, res) => {
   res.json(data)
 });

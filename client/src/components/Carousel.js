@@ -9,12 +9,13 @@ import {
 import { useSelector } from "react-redux";
 import "pure-react-carousel/dist/react-carousel.es.css";
 import "../styles/carousel.css";
+import useWindowSize from "../hooks/useWindowsSize"
 
 export default function Carousel() {
     const cakesData = useSelector((state) => state.products);
     // eslint-disable-next-line no-unused-vars
     const [shuffled, setShuffled] = useState([])
-
+    const { widthforCarousel } = useWindowSize()
 
     const slideHTML = shuffled.map((item, i) => {
         return (
@@ -30,10 +31,10 @@ export default function Carousel() {
 
     return (
         <CarouselProvider
-            naturalSlideWidth={300}
-            naturalSlideHeight={250}
+            naturalSlideWidth={100}
+            naturalSlideHeight={80}
             totalSlides={shuffled.length}
-            visibleSlides={3}
+            visibleSlides={widthforCarousel > 420 ? 3 : 1}
             step={1}
             currentSlide={1}
             infinite={true}

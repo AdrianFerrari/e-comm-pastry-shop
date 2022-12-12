@@ -83,10 +83,7 @@ Seccion 2 - Carousel
 .home-section-2 {
     margin: 0 auto;
     background: beige;
-    height: 500px;
-    padding-top: 100px;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 40px 0;
 } 
 
 .home-section-2 h1 {
@@ -103,15 +100,8 @@ Seccion 3 - Chefs
     background: beige;
     padding: 2em;
     padding-bottom: 200px;
-}
-
-.home-section-3-chefs {
     display: flex;
     flex-direction: column;
-    align-items: stretch;
-    min-height: 10px;
-    margin-top: 50px;
-    text-align: center;
     gap: 2rem;
 }
 
@@ -157,6 +147,7 @@ Seccion 3 - Chefs
 
 .chef-description {
     width: 200px;
+    padding-left: .5em;
 }
 
 .show {

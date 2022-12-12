@@ -319,7 +319,7 @@ Media
     }
 
     .product-container {
-        width: 623px;
+        width: 1024px;
     }
 
     .single-product-button {
@@ -339,12 +339,9 @@ Media
     }
 }
 
-@media (min-width:1200px){
-    .product-container {
-        width: 1024px;
-    }
 
+@media (min-width:1550px){
     .products-grid {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }

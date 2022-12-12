@@ -25,7 +25,7 @@ function Header({currentPage}) {
     cada ves que la pagina principal cambia*/
     useEffect(() => {
         let currentRef = null;
-        setTimeout(() => {
+        
             if (currentPage === "home") {
                 currentRef = refHome;
             } else if (currentPage === "products") {
@@ -35,7 +35,6 @@ function Header({currentPage}) {
             }
             navPointer(currentRef);
             setNavLinkFocus(currentPage);
-        }, "100")
     }, [currentPage]);
 
     /*cambia la posicion del puntero cuando clickeamos un link del nav*/

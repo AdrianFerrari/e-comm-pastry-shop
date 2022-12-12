@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-export function useObservador(ref) {
+function useObservador(ref) {
     const [isVisible, setIsVisible] = useState(false);
 
     useEffect(() => {
@@ -15,3 +15,5 @@ export function useObservador(ref) {
     }, []);
     return isVisible;
 }
+
+export default useObservador

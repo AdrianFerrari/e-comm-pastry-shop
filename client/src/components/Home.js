@@ -1,11 +1,15 @@
 import React, { useEffect, useRef } from "react";
-import { useObservador } from "../hooks/observer.hook";
+import useObservador from "../hooks/useObserver";
 import Carousel from "./Carousel";
 import { Link, useOutletContext } from "react-router-dom"
 import "../styles/home.css";
+import useProgressiveImage from "../hooks/useProgressiveImage";
 
 function Home() {
   const {setCurrentPage} = useOutletContext()
+  const bakery1loaded = useProgressiveImage("../images/chocolate-cake-1.jpg")
+  const bakery2loaded = useProgressiveImage("../images/chocolate-cake-2.jpg")
+  const bakery3loaded = useProgressiveImage("../images/lemon_rasberry.jpg")
   
   const chefRefKermit = useRef(null);
   const chefRefSwedish = useRef(null);
@@ -35,9 +39,9 @@ function Home() {
             aliquip ex ea commodo consequat.
           </p>
         </div>
-        <img className="bakery1" src={"../images/chocolate-cake-1.jpg"} alt="bakery" />
-        <img className="bakery2" src={"../images/chocolate-cake-2.jpg"} alt="bakery" />
-        <img className="bakery3" src={"../images/lemon_rasberry.jpg"} alt="bakery" />
+        {bakery1loaded && <img className="bakery1" src={bakery1loaded} alt="bakery"/> }
+        {bakery2loaded && <img className="bakery2" src={bakery2loaded} alt="bakery"/>}
+        {bakery3loaded && <img className="bakery3" src={bakery3loaded} alt="bakery"/>}
       </section>
 
       <section className="home-section-2">
@@ -48,7 +52,7 @@ function Home() {
       </section>
 
       <section className="home-section-3">
-        <div className="home-section-3-chefs">
+        
           <h1>Quienes Somos?</h1>
           <div className="chef-cards">
             <div ref={chefRefKermit} className={(kermitOnScreen && "show ") + "chef kermit"}>
@@ -82,7 +86,7 @@ function Home() {
               </div>
             </div>
           </div>
-        </div>
+        
       </section>
 
     </div>

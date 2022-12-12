@@ -2,10 +2,13 @@ import React from "react";
 import "../styles/products.css";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
+import useProgressiveImage from "../hooks/useProgressiveImage";
 
 function Product(props) {
   const { imgName, title, description, cost, id } = props.cake;
   const isGrid = props.productDisplay === "grid";
+  const loaded = useProgressiveImage(`../images/${imgName}.jpg`)
+  const placeholder = `../images/low_q/${imgName}.jpg`
 
   return (
     <Link
@@ -15,9 +18,10 @@ function Product(props) {
       <div
         className="image"
         style={{
-          backgroundImage: `url(../images/${imgName}.jpg)`,
+          backgroundImage: `url(${loaded || placeholder})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
+          backgroundPosition: "center"
         }}
       />
 
