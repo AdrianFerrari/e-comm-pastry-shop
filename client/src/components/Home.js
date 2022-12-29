@@ -27,7 +27,7 @@ function Home() {
   }, [])
 
   return (
-    <div className="home" style={{backgroundImage:`url("../images/background_bakery.jpg")`, backgroundRepeat: 'repeat', backgroundSize: '50%'}}>
+    <div className="home">
 
       <section className="home-section-1" style={{backgroundImage:`url("../images/bakery3.jpg")`, backgroundSize: 'cover'}}>
         <div className="home-info">
@@ -39,9 +39,9 @@ function Home() {
             aliquip ex ea commodo consequat.
           </p>
         </div>
-        {bakery1loaded && <img className="bakery1" src={bakery1loaded} alt="bakery"/> }
-        {bakery2loaded && <img className="bakery2" src={bakery2loaded} alt="bakery"/>}
-        {bakery3loaded && <img className="bakery3" src={bakery3loaded} alt="bakery"/>}
+        {bakery1loaded && <img className="bakery1 home-section-1-img" src={bakery1loaded} alt="bakery"/> }
+        {bakery2loaded && <img className="bakery2 home-section-1-img" src={bakery2loaded} alt="bakery"/>}
+        {bakery3loaded && <img className="bakery3 home-section-1-img" src={bakery3loaded} alt="bakery"/>}
       </section>
 
       <section className="home-section-2">
