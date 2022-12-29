@@ -98,9 +98,9 @@ function Products() {
           <div className="display-buttons">
             <i
               className={
-                productDisplay === "grid"
+                (productDisplay === "grid"
                   ? "ri-layout-grid-fill"
-                  : "ri-layout-grid-line"
+                  : "ri-layout-grid-line") + " grid-button"
               }
               width="45"
               height="45"
@@ -108,9 +108,9 @@ function Products() {
             />
             <i
               className={
-                productDisplay === "list"
+                (productDisplay === "list"
                   ? "ri-file-list-fill"
-                  : "ri-file-list-line"
+                  : "ri-file-list-line") + " list-button"
               }
               width="45"
               height="45"
