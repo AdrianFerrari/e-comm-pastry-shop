@@ -1,5 +1,6 @@
 header span {
     color: rgb(247, 64, 103);
+    font-display: optional;
     font-family: 'Titan One', cursive;
 }
 
@@ -11,6 +12,7 @@ header span {
 }
 
 .header-menu h1 {
+    font-display: optional;
     font-family: 'Lobster', cursive;
 }
 
@@ -63,6 +65,12 @@ header span {
     font-weight: 600;
     right: 0;
     top: -16px;
+}
+
+.ri-shopping-cart-fill,
+.ri-shopping-cart-line {
+    height: 32px;
+    width: 32px;
 }
 
 .none {
