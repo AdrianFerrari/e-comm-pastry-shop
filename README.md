@@ -8,6 +8,7 @@ Proyecto de practica de un e-commercio de tortas
 - React-Reuter
 - Express
 - Nodejs
+- Cypress
 
 ## Screenshots
 
