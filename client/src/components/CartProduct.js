@@ -26,7 +26,7 @@ function CartProduct({ imgName, title, id, cost, removeFromCart }) {
           onClick={() => removeFromCart(id)}
           onMouseOver={() => setHover(true)}
           onMouseOut={() => setHover(false)}
-          className={isHover ? "ri-delete-bin-fill" : "ri-delete-bin-line"}
+          className={(isHover ? "ri-delete-bin-fill" : "ri-delete-bin-line") + " bin-icon"}
         />
         <p>${cost}</p>
       </div>

@@ -15,10 +15,13 @@ export const productSlice = createSlice({
     },
     init: (state, action) => {
       return initialState = action.payload
+    },
+    find: (state, action) => {
+      return initialState.find((product) => product.id === action.payload)
     }
   },
 });
 
-export const { filter, init } = productSlice.actions;
+export const { filter, init, find } = productSlice.actions;
 
 export default productSlice.reducer;
