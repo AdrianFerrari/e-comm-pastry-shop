@@ -72,7 +72,7 @@ function Home() {
               />
               <div className="chef-description">
                 <h3>The swedish</h3>
-                <p>Quisque ac nisi non augue auctor vestibulum in nec ligula. Fusce iaculis pretium nunc sit amet faucibus. Morbi dignissim nisl sed nulla ultrices, id ultrices mauris molestie.</p>
+                <p>Quisque acs nisi non augue auctor vestibulum in nec ligula. Fusce iaculis pretium nunc sit amet faucibus. Morbi dignissim nisl sed nulla ultrices, id ultrices mauris molestie.</p>
               </div>
             </div>
             <div ref={chefRefMonster} className={(monsterOnScreen && "show ") + "chef monster"}>
