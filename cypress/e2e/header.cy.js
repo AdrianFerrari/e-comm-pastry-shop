@@ -8,6 +8,7 @@ describe("header", () => {
     cy.get(".home-link").click()
       .then((pos1) => {
         cy.get(".nav-pointer")
+          .wait(1000)
           .should("be.visible")
           .then((pos2) => {
             expect(pos1.position().left).to.be.eq(pos2.position().left);
@@ -18,6 +19,7 @@ describe("header", () => {
     cy.get(".product-link").click()
       .then((pos1) => {
         cy.get(".nav-pointer")
+          .wait(1000)
           .should("be.visible")
           .then((pos2) => {
             expect(pos1.position().left).to.be.eq(pos2.position().left);
@@ -28,6 +30,7 @@ describe("header", () => {
     cy.get(".contact-link").click()
       .then((pos1) => {
         cy.get(".nav-pointer")
+          .wait(1000)
           .should("be.visible")
           .then((pos2) => {
             expect(pos1.position().left).to.be.eq(pos2.position().left);
