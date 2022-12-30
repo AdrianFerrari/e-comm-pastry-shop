@@ -1,12 +1,14 @@
-import Header from "../../src/components/Header";
-import React from "react";
+/// <reference types="cypress" />
 
-describe("Header", () => {
+describe("header", () => {
+  beforeEach(() => {
+    cy.visit('/')
+  })
   it("current page highlighter works when changing page to home", () => {
-    cy.mount(<Header currentPage={"home"} />);
-    cy.get(".home-link")
+    cy.get(".home-link").click()
       .then((pos1) => {
         cy.get(".nav-pointer")
+          .wait(500)
           .should("be.visible")
           .then((pos2) => {
             expect(pos1.position().left).to.be.eq(pos2.position().left);
@@ -14,10 +16,10 @@ describe("Header", () => {
       });
   });
   it("current page highlighter works when changing page to product", () => {
-    cy.mount(<Header currentPage={"products"} />);
-    cy.get(".product-link")
+    cy.get(".product-link").click()
       .then((pos1) => {
         cy.get(".nav-pointer")
+          .wait(500)
           .should("be.visible")
           .then((pos2) => {
             expect(pos1.position().left).to.be.eq(pos2.position().left);
@@ -25,10 +27,10 @@ describe("Header", () => {
       });
   });
   it("current page highlighter works when changing pages to contact", () => {
-    cy.mount(<Header currentPage={"contact"} />);
-    cy.get(".contact-link")
+    cy.get(".contact-link").click()
       .then((pos1) => {
         cy.get(".nav-pointer")
+          .wait(500)
           .should("be.visible")
           .then((pos2) => {
             expect(pos1.position().left).to.be.eq(pos2.position().left);

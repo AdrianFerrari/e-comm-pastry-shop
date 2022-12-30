@@ -2,9 +2,9 @@
 
 describe("browse and add products to carts", () => {
     beforeEach(() => {
-        cy.visit('http://localhost:3000/products')
+        cy.visit('/products')
         cy.fixture('data.json').as('cakes_data')
-        cy.intercept('GET', 'http://localhost:3000/api/data/*', 'cakes_data').as('getCakesData')
+        cy.intercept('GET', '/api/data/*', 'cakes_data').as('getCakesData')
     })
 
     it("categories menu should change from dropdown to categories", () => {

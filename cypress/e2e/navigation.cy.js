@@ -2,7 +2,7 @@
 
 describe('can change pages', () => {
   beforeEach(() => {
-    cy.visit('localhost:3000')
+    cy.visit('/')
   })
 
   it('can change to products', () => {
@@ -26,7 +26,7 @@ describe('can change pages', () => {
     
     cy.get('.product').each((product) => {
       const name = product.find('h3').text()
-      cy.visit('http://localhost:3000' + product.attr('href'))
+      cy.visit('/' + product.attr('href'))
       cy.get('h3').should('have.text', name)
       cy.go('back')
     })
