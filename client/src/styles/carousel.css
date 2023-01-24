@@ -11,12 +11,12 @@
     all: revert;
     width: 50px;
     margin: 0 10px;
-    background-color: beige;
-    border: 1px solid rgb(56, 51, 3);
+    background-color: var(--color-1);
+    border: 1px solid var(--color-3);
 }
 
 .carousel__dot:disabled {
-    background-color: rgb(56, 51, 3);
+    background-color: var(--color-3);
 }
 
 .carousel__dot-group {

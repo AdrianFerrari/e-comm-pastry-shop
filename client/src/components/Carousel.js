@@ -19,8 +19,8 @@ export default function Carousel() {
 
     const slideHTML = shuffled.map((item, i) => {
         return (
-            <Slide key={item.title} index={i}>
-                <Image className="carousel-img" src={`../images/${item.imgName}.jpg`} />
+            <Slide key={item.name} index={i}>
+                <Image className="carousel-img" src={item.img_url} />
             </Slide>
         );
     });

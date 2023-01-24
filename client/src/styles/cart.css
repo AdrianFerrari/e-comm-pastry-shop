@@ -1,57 +1,104 @@
 .cart {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 30px;
     width: 90%;
-    margin: auto;
-    margin-top: 20px;
+    margin: 40px auto;
     min-height: 100vh;
-    max-width: 1024px;
+    max-width: 1466px;
+}
+
+.cart-labels {
+    display: none;
 }
 
 .cart hr {
     margin-top: 10px;
-    border: 1px solid rgb(88, 71, 50);
-}
-
-.cart p {
-    font-size: 1.2em;
-}
-
-.cart h3 {
-    font-size: 1.4em;
+    border: 1px solid var(--color-3);
 }
 
 .cart-item {
-    display: flex;
-    height: 5vh;
-    width: 100%;
-    justify-content: space-between;
-}
-
-.cart-left-div {
-    display: flex;
-    gap: 1em;
-    align-items: stretch;
-    height: 100%;
-}
-
-.cart-rigth-div {
-    display: flex;
-    gap: 1em;
+    display: grid;
+    grid-template-columns: 30px 100px auto auto;
+    grid-template-rows: auto;
     align-items: center;
-    height: 100%;
+    border-bottom: 2px solid var(--color-2);
+    padding: 1.3em 0;
+    gap: 20px;
+    grid-template-areas: 
+        "bin image info info"
+        "bin image cost quantity"
+        "bin image totalcost quantity";
 }
 
 .cart-item .image {
     aspect-ratio: 1 / 1;
+    grid-area: image;
 }
 
-.cart-item h3 {
-    align-self: center;
+.cart-info {
+    grid-area: info;
+}
+
+.cart-quantity {
+    display: flex;
+    grid-area: quantity;
+    place-self: center center;
+}
+
+.cart-quantity > button {
+    padding: .5;
+    width: 30px;
+    height: 30px;
+    background-color: var(--color-2);
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.cart-quantity > input {
+    width: 30px;
+    height: 30px;
+}
+
+.cart-remove {
+    grid-area: bin;
 }
 
 .cart-cost {
-    display: flex;
-    justify-content: space-between;
+    grid-area: cost;
+}
+
+.cart-totalcost {
+    grid-area: totalcost;
+}
+
+@media(min-width: 700px) {
+    .cart-info {
+        margin-left: 40px;
+    }
+    .cart-labels {
+        display: grid;
+        grid-template-columns: auto 15% 15% 15%;
+        font-size: 1.1em;
+        font-weight: bold;
+        padding: 1em 0;
+        background-color: var(--color-2);
+    }
+    .cart-item {
+        grid-template-columns: 60px 100px auto 15% 15% 15%;
+        grid-template-rows: auto;
+        grid-template-areas: "bin image info quantity cost totalcost";
+    }
+    .cart-cost > span,
+    .cart-totalcost > span {
+        display: none;
+    }
+}
+
+
+@media(min-width: 1100px) {
+    .cart {
+        grid-template-columns: 1fr auto;
+    }
 }

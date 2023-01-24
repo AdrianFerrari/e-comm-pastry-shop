@@ -1,6 +1,6 @@
 .footer {
-    background-color: rgb(77, 57, 32);
-    color: beige;
+    background-color: var(--color-3);
+    color: var(--color-1);
     height: 20vh;
     width: 100%;
     font-size: 1em;
@@ -17,7 +17,7 @@
 
 .footer-info h1 {
     font-size: 1.5rem;
-    color: beige;
+    color: var(--color-1);
 }
 
 @media (max-width: 580px) {

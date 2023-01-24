@@ -7,6 +7,13 @@
     -webkit-box-sizing: border-box;
 }
 
+:root {
+    --color-1: beige;
+    --color-2: rgb(212, 201, 141);
+    --color-3: rgb(114, 57, 16);
+    --pink: rgb(247, 64, 103);
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -16,7 +23,7 @@ h1,
 h2,
 h3 {
     margin: 0;
-    color: rgb(56, 51, 3);
+    color: var(--color-3);
 }
 
 button {

@@ -9,6 +9,7 @@ const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
 
 const app = express();
 
+
 //midleware
 app.use(compression())
 app.use(express.json())
@@ -31,6 +32,7 @@ app.get("/images/low_q/:name", (req, res) => {
 app.get("/api/data", (req, res) => {
   res.json(data)
 });
+
 
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "client/build/index.html"));

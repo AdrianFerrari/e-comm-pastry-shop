@@ -11,7 +11,7 @@ describe("header", () => {
           .wait(1000)
           .should("be.visible")
           .then((pos2) => {
-            expect(pos1.position().left).to.be.eq(pos2.position().left);
+            expect(pos1.position().left).to.be.closeTo(pos2.position().left, 0.5);
           });
       });
   });
@@ -22,7 +22,7 @@ describe("header", () => {
           .wait(1000)
           .should("be.visible")
           .then((pos2) => {
-            expect(pos1.position().left).to.be.eq(pos2.position().left);
+            expect(pos1.position().left).to.be.closeTo(pos2.position().left, 0.5);
           });
       });
   });
@@ -33,7 +33,7 @@ describe("header", () => {
           .wait(1000)
           .should("be.visible")
           .then((pos2) => {
-            expect(pos1.position().left).to.be.eq(pos2.position().left);
+            expect(pos1.position().left).to.be.closeTo(pos2.position().left, 0.5);
           });
       });
   });

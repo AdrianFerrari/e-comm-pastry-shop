@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
+import PropTypes from "prop-types";
 
-const useProgressiveImage = src => {  
+function useProgressiveImage (src, placeholder) {  
     const [sourceLoaded, setSourceLoaded] = useState(null)
   
     useEffect(() => {
@@ -9,7 +10,22 @@ const useProgressiveImage = src => {
       img.onload = () => setSourceLoaded(src)
     }, [src])
   
-    return sourceLoaded 
+    return (
+      <div
+          className="image"
+          style={{
+            backgroundImage: `url(${sourceLoaded || placeholder})`,
+            backgroundRepeat: "no-repeat",
+            backgroundSize: "cover",
+            backgroundPosition: "center"
+          }}
+      />
+    )
   }
 
   export default useProgressiveImage
+
+  useProgressiveImage.propTypes = {
+    src: PropTypes.string,
+    placeholder: PropTypes.string
+  };

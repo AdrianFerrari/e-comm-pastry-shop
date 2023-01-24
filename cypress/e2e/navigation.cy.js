@@ -26,7 +26,7 @@ describe('can change pages', () => {
     
     cy.get('.product').each((product) => {
       const name = product.find('h3').text()
-      cy.visit('/' + product.attr('href'))
+      cy.visit(product.find('.image-container').attr('href'))
       cy.get('h3').should('have.text', name)
       cy.go('back')
     })

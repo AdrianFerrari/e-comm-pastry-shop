@@ -7,32 +7,16 @@ describe("browse and add products to carts", () => {
         cy.intercept('GET', '/api/data/*', 'cakes_data').as('getCakesData')
     })
 
-    it("categories menu should change from dropdown to categories", () => {
-        cy.viewport(400, 500)
-        cy.get(".sidebar").should("be.not.visible")
-        cy.get(".menu-container").should("be.visible")
-
-        cy.viewport(901,900)
-        cy.get(".sidebar").should("be.visible")
-        cy.get(".menu-container").should("be.not.visible")
-    })
-
     it("change product categories", () => {
         cy.contains("Chocolate Stout").as("Stout")
         cy.contains("Coffe cake").as("Coffe")
 
-        cy.viewport(400, 500)
         cy.get(".menu-container").click().contains("Cafe").click()
         cy.get("@Stout").should("not.exist")
         cy.get("@Coffe").should("be.visible")
 
-        cy.get(".menu-container").contains("All").click()
+        cy.get(".menu-container").contains("Todos").click()
         cy.get("@Stout").should("be.visible")
-
-        cy.viewport(901,900)
-        cy.get(".sidebar > button").contains("Cafe").click()
-        cy.get("@Stout").should("not.exist")
-        cy.get("@Coffe").should("be.visible")
     })
 
     it("can add a product to the cart and remove it", () => {

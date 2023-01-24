@@ -3,30 +3,31 @@ import "../styles/products.css";
 import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import useProgressiveImage from "../hooks/useProgressiveImage";
+import { add } from "../redux-store/cartSlice";
+import { useDispatch } from "react-redux";
 
 function Product(props) {
-  const { imgName, title, description, cost, id } = props.cake;
+  const { img_url, name, description, cost, id, placeholder } = props.cake;
   const isGrid = props.productDisplay === "grid";
-  const loaded = useProgressiveImage(`../images/${imgName}.jpg`)
-  const placeholder = `../images/low_q/${imgName}.jpg`
+  const dispatch = useDispatch();
+  const image = useProgressiveImage(img_url, `../images/low_q/${placeholder}.jpg`)
+
+  function addToCart() {
+    dispatch(add({...props.cake, quantity: 1}));
+}
 
   return (
-    <Link
-      className={(isGrid ? "product-grid" : "product-list") + " product"}
-      to={`${id}`}
-    >
-      <div
-        className="image"
-        style={{
-          backgroundImage: `url(${loaded || placeholder})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: "cover",
-          backgroundPosition: "center"
-        }}
-      />
+    <div className={(isGrid ? "product-grid" : "product-list") + " product"}>
 
-      <div className={`info-product-${props.productDisplay}`}>
-        <h3>{title}</h3>
+      <Link
+        to={`${id}`}
+        className="image-container"
+      >
+        {image}
+      </Link>
+
+      <div className={`info-product ${props.productDisplay}`}>
+        <h3>{name}</h3>
         <p className="cost">${cost}</p>
         <p
           className="description"
@@ -35,13 +36,18 @@ function Product(props) {
           {description}
         </p>
       </div>
-    </Link>
+
+      <button className="buy-product-button" onClick={addToCart}>
+          Agregar al carrito
+      </button>
+      
+    </div>
   );
 }
 
 Product.propTypes = {
-  imgName: PropTypes.string,
-  title: PropTypes.string,
+  img_url: PropTypes.string,
+  name: PropTypes.string,
   description: PropTypes.string,
   cost: PropTypes.number,
   categories: PropTypes.array,

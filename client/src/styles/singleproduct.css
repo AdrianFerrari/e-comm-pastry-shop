@@ -1,0 +1,194 @@
+.single-page-container {
+    min-height: 100vh;
+}
+
+.single-product {
+    background: var(--color-1);
+    display:grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-template-rows: fit-content 30px 30px;
+    grid-auto-rows: auto;
+    width: 90%;
+    gap: 5px;
+    max-width: 1000px;
+    margin: auto;
+    grid-template-areas: 
+    "name name name"
+    "image description description"
+    "image cost cost"
+    "quantity security security"
+    "button button button"
+    "stock stock stock";
+}
+
+.single-product h3 {
+    font-family: 'Brush Script MT', cursive;
+    font-size: 2rem;
+    grid-area: name;
+}
+
+
+.single-product img {
+    object-fit: cover;
+    aspect-ratio: 1/1;
+    grid-area: image;
+    width: 100%;
+}
+
+.single-product-description {
+    grid-area: description;
+    font-size: 1em;
+    align-self: end;
+}
+
+.single-product-cost {
+    grid-area: cost;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.single-product-quantity {
+    display: flex;
+    grid-area: quantity;
+    align-self: center;
+    justify-self: center;
+}
+
+.single-product-quantity > button {
+    padding: .5;
+    width: 40px;
+    height: 40px;
+    background-color: var(--color-2);
+    font-size: 1em;
+    font-weight: bold;
+}
+
+.single-product-quantity > input {
+    width: 40px;
+    height: 40px;
+    font-size: 1.3em;
+    text-align: center;
+    padding: 0;
+}
+
+.single-product-security {
+    display: flex;
+    grid-area: security;
+}
+.single-product-security > p > span {
+    color: cornflowerblue;
+}
+
+.single-product-button {
+    cursor: pointer;
+    padding: 1em 1.4em;
+    font-size: 1em;
+    background-color: var(--pink);
+    color: var(--color-1);
+    font-weight: bold;
+    letter-spacing: 3px;
+    z-index: 10;
+    border: 2px solid var(--pink);
+    z-index: 99;
+    grid-area: button;
+}
+
+.single-product-button:active {
+    filter: brightness(1.5);
+}
+
+.single-product-button:hover {
+    background-color: var(--color-1);
+    color: var(--pink);
+}
+
+.single-product-stock {
+    grid-area: stock;
+    justify-self: center;
+}
+
+.go-back-arrow {
+    font-size: 1em;
+    color: var(--color-3);
+    padding: .5em;
+}
+
+@media(min-width: 570px) {
+    .single-product {
+        grid-template-rows: 40px 40px 40px;
+        grid-template-areas: 
+        "image name name"
+        "image description description"
+        "image cost cost"
+        "image quantity quantity"
+        "image security security"
+        "button button button"
+        "stock stock stock";
+    }
+    .single-product-description {
+        align-self: start;
+    }
+    .single-product-quantity {
+        justify-self: start;
+    }
+}
+
+@media(min-width: 700px) {
+    .single-product {
+        grid-template-rows: 70px 70px 40px;
+    }
+    .single-product h3 {
+        font-size: 3rem;
+    }
+    .single-product-description {
+        font-size: 1.3em;
+    }
+    .single-product-cost {
+        align-self: center;
+    }
+}
+
+@media(min-width: 835px) {
+    .single-product {
+        gap: 20px;
+        grid-template-areas: 
+        "image name name"
+        "image description description"
+        "image cost cost"
+        "image quantity security"
+        "button button button"
+        "stock stock stock";
+    }
+    .single-product-quantity {
+        align-self: start;
+    }
+    .single-product-quantity > button {
+        width: 60px;
+        height: 60px;
+        font-size: 1.2em;
+    }
+    
+    .single-product-quantity > input {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 1000px) {
+    .single-product {
+        grid-template-areas: 
+        "image name name"
+        "image description description"
+        "image cost cost"
+        "image quantity security"
+        "image button button"
+        "image stock stock"
+    }
+    .single-product-button {
+        font-size: 1.3em;
+        width: fit-content;
+        height: fit-content;
+        justify-self: center;
+    }
+}

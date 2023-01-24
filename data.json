@@ -3,41 +3,44 @@
   "results":[
      {
         "id":0,
-        "title":"Amandine",
+        "name":"Amandine",
         "description":"Bizcocho en capas de chocolate relleno de chocolate, caramelo y crema fondant.",
         "cost":100,
         "categories":[
            "chocolate",
            "caramelo"
         ],
-        "imgName":"Amandine_cake"
+        "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586840/cakes/Amandine_cake_wkuajp.jpg",
+        "placeholder": "Amandine_cake"
      },
      {
         "id":1,
-        "title":"Torta de Angel",
-        "description":"Un tipo de bizcocho en capas, a menudo adornado con crema y colorante para alimentos.",
+        "name":"Torta de Angel",
+        "description":"Un tipo de bizcocho en capas, adornado con crema y colorante para alimentos.",
         "cost":140,
         "categories":[
            "cream",
            "vainilla"
         ],
-        "imgName":"Angel_Slice"
+        "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586845/cakes/Angel_Slice_smfzzy.jpg",
+        "placeholder": "Angel_Slice"
      },
      {
         "id":2,
-        "title":"Torta de Manzana",
-        "description":"Un pastel con manzanas, ocasionalmente cubierto con glaseado de caramelo.",
+        "name":"Torta de Manzana",
+        "description":"Un pastel con manzanas, cubierto con glaseado de caramelo.",
         "cost":100,
         "categories":[
            "manzana",
            "caramelo",
            "helado"
         ],
-        "imgName":"Apple_cake"
+        "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586852/cakes/Apple_cake_ipmwlt.jpg",
+        "placeholder": "Apple_cake"
      },
      {
         "id":3,
-        "title":"Babka",
+        "name":"Babka",
         "description":"Un pastel dulce trenzado que se originó en las comunidades judías.",
         "cost":55,
         "categories":[
@@ -45,114 +48,125 @@
            "chocolate",
            "manzana"
         ],
-        "imgName":"Babka"
+        "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586856/cakes/Babka_ntkakm.jpg",
+        "placeholder": "Babka"
      },
      {
         "id":4,
-        "title":"Torta de Banana",
+        "name":"Torta de Banana",
         "description":"Un pastel con plátano como ingrediente principal.",
         "cost":60,
         "categories":[
            "banana"
         ],
-        "imgName":"Banana_cake"
+        "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586864/cakes/Banana_cake_qsav5h.jpg",
+        "placeholder": "Banana_cake"
      },
      {
         "id":5,
-        "title":"Chocolate Stout",
-        "description":"Cualquier bizcocho preparado con cerveza como ingrediente principal; En la foto, un bizcocho de chocolate infundido con cerveza negra.",
+        "name":"Chocolate Stout",
+        "description":"Un bizcocho de chocolate infundido con cerveza negra.",
         "cost":120,
         "categories":[
            "cerveza",
            "chocolate"
         ],
-        "imgName":"Chocolate_Stout"
+        "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586880/cakes/Chocolate_Stout_yletxw.jpg",
+        "placeholder": "Chocolate_Stout"
      },
      {
         "id":6,
-        "title":"Selva Negra",
-        "description":"Un pastel con cerezas, kirsch y chocolate. Por lo general, hay una capa inferior de masa quebrada de chocolate y dos capas de bizcocho de chocolate. Luego, el pastel se rellena con mermelada de cereza y crema batida.",
+        "name":"Selva Negra",
+        "description":"Un pastel con cerezas, kirsch y chocolate. Hay una capa inferior de masa quebrada de chocolate y dos capas de bizcocho de chocolate. Luego, el pastel se rellena con mermelada de cereza y crema batida.",
         "cost":200,
         "categories":[
            "chocolate"
         ],
-        "imgName":"Black_Forest"
+        "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586866/cakes/Black_Forest_wqgy1k.jpg",
+        "placeholder": "Black_Forest"
      },
      {
         "id":7,
-        "title":"Torta de Queso",
+        "name":"Torta de Queso",
         "description":"Un postre con una base delgada hecha de galletas trituradas y una capa superior más gruesa de queso blando, huevos y azúcar.",
         "cost":80,
         "categories":[
            "queso"
         ],
-        "imgName":"Cheesecake"
+        "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586876/cakes/Cheesecake_ix6dhp.jpg",
+        "placeholder": "Cheesecake"
      },
      {
         "id":8,
-        "title":"Chocotorta",
+        "name":"Chocotorta",
         "description":"Un pastel hecho con galletas de chocolate, dulce de leche y queso crema.",
         "cost":105,
         "categories":[
            "galletitas",
            "chocolate"
         ],
-        "imgName":"Chocotorta"
+        "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586892/cakes/Chocotorta_f0nncu.jpg",
+        "placeholder": "Chocotorta"
      },
      {
         "id":9,
-        "title":"Coffe cake",
+        "name":"Coffe cake",
         "description":"Un pastel de una sola capa con sabor a canela y cubierto con una cobertura de migas, destinado a comerse con café.",
         "cost":50,
         "categories":[
            "cafe",
            "chocolate"
         ],
-        "imgName":"Coffee_cake"
+        "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586897/cakes/Coffee_cake_irhyyc.jpg",
+        "placeholder": "Coffee_cake"
      },
      {
         "id":10,
-        "title":"Torta de frutas",
-        "description":"Un rico bizcocho con frutas confitadas y especias; muchas versiones del pastel contienen grosellas, sultanas y cerezas glaseadas.",
+        "name":"Torta de frutas",
+        "description":"Un rico bizcocho con frutas confitadas y especias. Contienen grosellas, sultanas y cerezas glaseadas.",
         "cost":40,
         "categories":[
            "fruta"
         ],
-        "imgName":"Fruitcake"
+        "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586910/cakes/Fruitcake_nryjno.jpg",
+        "placeholder": "Fruitcake"
      },
      {
         "id":11,
-        "title":"Torta Dundee",
-        "description":"Un pastel de frutas sin cerezas glaseadas cubierto con almendras.",
+        "name":"Torta Dundee",
+        "description":"Un pastel de frutas con cerezas glaseadas cubierto con almendras.",
         "cost":80,
         "categories":[
            "fruta"
         ],
-        "imgName":"Dundee_cake"
+        "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586906/cakes/Dundee_cake_zostfw.jpg",
+        "placeholder": "Dundee_cake"
      },
      {
         "id":12,
-        "title":"Funnelcake",
-        "description":"Una pasta choux con azúcar en polvo u otros aderezos, generalmente fruta.",
+        "name":"Funnelcake",
+        "description":"Una pasta choux con azúcar en polvo y fruta.",
         "cost":98,
         "categories":[
            "fruta"
         ],
-        "imgName":"funnel_cake"
+        "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586915/cakes/funnel_cake_xgqrdn.jpg",
+        "placeholder": "funnel_cake"
      },
      {
         "id":13,
-        "title":"Torta de Ciruela",
+        "name":"Torta de Ciruela",
         "description":"Pastel preparado con frutas ciruelas como ingredientes principales.",
         "cost":65,
         "categories":[
            "fruta"
         ],
-        "imgName":"Plum_cake"
+        "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586933/cakes/Plum_cake_csja6y.jpg",
+        "placeholder": "Plum_cake"
      },
      {
         "id":14,
-        "title":"Torta marbelada",
+        "name":"Torta marbelada",
         "description":"Un pastel de mantequilla de vainilla, café o chocolate en el que dos masas de diferentes colores se mezclan para mostrar un patrón similar al mármol.",
         "cost":100,
         "categories":[
@@ -160,7 +174,67 @@
            "vainilla",
            "chocolate"
         ],
-        "imgName":"marble_cake"
-     }
+        "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586922/cakes/marble_cake_djja5m.jpg",
+        "placeholder": "marble_cake"
+     },
+     {
+      "id":15,
+      "name":"Torta de frambuesa y limon",
+      "description":"Tres capas de torta de limon con mermelada de frambuesa entre medio y crema de limon. Cubierta con mas crema de limon y terminada con frambuesas en la cima",
+      "cost":100,
+      "categories":[
+         "fruta",
+         "limon",
+         "cream"
+      ],
+      "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586918/cakes/lemon_rasberry_znaw6t.jpg",
+      "placeholder": "lemon_rasberry"
+   },
+   {
+      "id":16,
+      "name":"Torta de chocolate",
+      "description":"Torta de chocolate con mouse de chocolate y cholate rallado en el tope.",
+      "cost":200,
+      "categories":[
+         "chocolate"
+      ],
+      "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586889/cakes/chocolate-cake-2_cpudof.jpg",
+      "placeholder": "chocolate-cake-2"
+   },
+   {
+      "id":17,
+      "name":"Torta de nuez",
+      "description":"Un pastel de nuezes mezclada con manteca, huevos y azucar.",
+      "cost":120,
+      "categories":[
+         "nuez"
+      ],
+      "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586926/cakes/pecan_pie_yhlwwx.jpg",
+      "placeholder": "pecan_pie"
+   },
+   {
+      "id":18,
+      "name":"Torta de crema frutilla",
+      "description":"Torta de chocolate con crema de frutilla.",
+      "cost":100,
+      "categories":[
+         "strawberry",
+         "cream",
+         "chocolate"
+      ],
+      "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586930/cakes/pink_cake_xmipl3.jpg",
+      "placeholder": "pink_cake"
+   },
+   {
+      "id":19,
+      "name":"Torta azul",
+      "description":"Torta azul.",
+      "cost":100,
+      "categories":[
+         "chocolate"
+      ],
+      "img_url":"https://res.cloudinary.com/dlxt32ksz/image/upload/v1674586873/cakes/blue_cake_agnfv2.jpg",
+      "placeholder": "blue_cake"
+   }
   ]
 }

@@ -11,21 +11,12 @@ function Header({ currentPage }) {
   const refHome = useRef();
   const refProducts = useRef();
   const refContact = useRef();
-  const refCart = useRef();
 
   function getPosition(element) {
     const { top, right, left, width, height, x, y } =
       element.current.getBoundingClientRect();
     return { top, right, left, width, height, x, y };
   }
-
-  /*remueve y añade la clase de animacion del contador para que 
-    se dispare cada ves que se añada una compra*/
-  useEffect(() => {
-    refCart.current.classList.remove("animate");
-    void refCart.current.offsetWidth;
-    refCart.current.classList.add("animate");
-  }, [cartItems]);
 
   /*establece la ref del puntero de navegacion incialmente y
     cada ves que la pagina principal cambia*/
@@ -71,9 +62,8 @@ function Header({ currentPage }) {
         <div className="header-buttons">
           <Link className="cart-link" to="/cart">
             <p
-              ref={refCart}
               className={
-                cartItems.length > 0 ? "cart-counter" : "none" + " animate"
+                cartItems.length > 0 ? "cart-counter" : "none"
               }
             >
               {cartItems.length}

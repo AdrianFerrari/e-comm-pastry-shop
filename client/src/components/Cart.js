@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/cart.css";
 import CartProduct from "./CartProduct";
 import { useDispatch, useSelector } from "react-redux";
 import { remove } from "../redux-store/cartSlice";
 import { useNavigate } from "react-router-dom";
+import CheckOut from "./CheckOut";
 
 function Cart() {
   const cartItems = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const [grandTotal, setGrandTotal] = useState(addGrandTotal)
+
+  function addGrandTotal() {
+    return (
+      cartItems.reduce(
+        (valorPrev, valorActual) => valorPrev + valorActual.totalCost,
+        0
+      )
+    )
+  }
 
   function removeFromCart(id) {
     dispatch(remove(id));
@@ -18,18 +29,10 @@ function Cart() {
     return <CartProduct removeFromCart={removeFromCart} {...item} key={i} />;
   });
 
-  const costSum = (
-    <div className="cart-cost">
-      <h3>Total Cost</h3>
-      <p>
-        $
-        {cartItems.reduce(
-          (valorPrev, valorActual) => valorPrev + valorActual.cost,
-          0
-        )}
-      </p>
-    </div>
-  );
+  useEffect(() => {
+    setGrandTotal(() => addGrandTotal())
+  }, [useSelector((state) => state.cart)])
+
 
   return (
     <>
@@ -37,10 +40,21 @@ function Cart() {
         &#11013; Go back
       </button>
       <div className="cart">
-        {cartHTML}
-        <hr />
-        {costSum}
+
+        <div>
+          <div className="cart-labels">
+            <p style={{textAlign:"center"}}>Item</p>
+            <p>Quantity</p>
+            <p>Cost</p>
+            <p>Total</p>
+          </div>
+          {cartHTML}
+        </div>
+
+        <CheckOut grandTotal={grandTotal} cartItems={cartItems}/>
+
       </div>
+      
     </>
   );
 }
