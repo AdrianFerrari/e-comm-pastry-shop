@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "../styles/cart.css";
 import CartProduct from "./CartProduct";
 import { useDispatch, useSelector } from "react-redux";
@@ -10,16 +10,7 @@ function Cart() {
   const cartItems = useSelector((state) => state.cart);
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [grandTotal, setGrandTotal] = useState(addGrandTotal)
-
-  function addGrandTotal() {
-    return (
-      cartItems.reduce(
-        (valorPrev, valorActual) => valorPrev + valorActual.totalCost,
-        0
-      )
-    )
-  }
+    
 
   function removeFromCart(id) {
     dispatch(remove(id));
@@ -28,10 +19,6 @@ function Cart() {
   const cartHTML = cartItems.map((item, i) => {
     return <CartProduct removeFromCart={removeFromCart} {...item} key={i} />;
   });
-
-  useEffect(() => {
-    setGrandTotal(() => addGrandTotal())
-  }, [useSelector((state) => state.cart)])
 
 
   return (
@@ -51,7 +38,7 @@ function Cart() {
           {cartHTML}
         </div>
 
-        <CheckOut grandTotal={grandTotal} cartItems={cartItems}/>
+        <CheckOut/>
 
       </div>
       

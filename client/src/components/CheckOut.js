@@ -1,10 +1,11 @@
-import React, { useState } from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from "prop-types";
 import "../styles/checkout.css"
 import emailjs from "@emailjs/browser";
+import { useSelector } from "react-redux";
 
-function CheckOut({grandTotal, cartItems}) {
-    const items = cartItems.reduce((accumulator, item) => accumulator + `${item.name} x ${item.quantity} = $${item.totalCost}` + "\n", "Items:\n")
+function CheckOut() {
+    const cartItems = useSelector((state) => state.cart);
     const [dataForm, setDataForm] = useState({
         nombre: "",
         apellido: "",
@@ -13,11 +14,9 @@ function CheckOut({grandTotal, cartItems}) {
         provincia: "",
         direccion: "",
         email: "",
-        grandTotal: grandTotal,
-        items: items
+        grandTotal: 0,
+        items: ""
     })
-
-    
 
     function handleChange(event) {
         const value = event.target.value
@@ -39,6 +38,16 @@ function CheckOut({grandTotal, cartItems}) {
             `${process.env.REACT_APP_PUBLIC_KEY}`
         )
     }
+
+    useEffect(() => {
+        setDataForm(prev => {
+            return {
+                ...prev,
+                items: cartItems.reduce((accumulator, item) => accumulator + `${item.name} x ${item.quantity} = $${item.totalCost}` + "\n", "Items:\n"),
+                grandTotal: cartItems.reduce((valorPrev, valorActual) => valorPrev + valorActual.totalCost, 0)
+            }
+        })
+    }, [useSelector((state) => state.cart)])
 
     return (
         <div className="checkout">
@@ -62,7 +71,7 @@ function CheckOut({grandTotal, cartItems}) {
                 <input type="email" value={dataForm.email} id="email" name="email" placeholder="email@email.com" onChange={handleChange} required/>
             </form>
             <div className="cart-total">
-                <p>Grand Total: ${grandTotal}</p>
+                <p>Grand Total: ${dataForm.grandTotal}</p>
             </div>
             <button className="checkout-btn" type="submit" form="form">CHECKOUT</button>
         </div>
