@@ -10,7 +10,7 @@ function Product(props) {
   const { img_url, name, description, cost, id, placeholder } = props.cake;
   const isGrid = props.productDisplay === "grid";
   const dispatch = useDispatch();
-  const image = useProgressiveImage(img_url, `../images/low_q/${placeholder}.jpg`)
+  const image = useProgressiveImage(img_url, `/images/low_q/${placeholder}.jpg`)
 
   function addToCart() {
     dispatch(add({...props.cake, quantity: 1}));
