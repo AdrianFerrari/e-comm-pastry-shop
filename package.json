@@ -8,7 +8,7 @@
     "test": "cd client && npm run test",
     "start": "node index.js --ignore client",
     "dev": "nodemon index.js",
-    "build": "cd client && npm install && npm run build"
+    "build": "cd client && npm install && npm run build --dist-dir client/build"
   },
   "repository": {
     "type": "git",

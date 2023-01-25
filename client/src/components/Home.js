@@ -61,7 +61,7 @@ function Home() {
             <div className="chef-cards">
               <div ref={chefRefKermit} className={(kermitOnScreen && "show ") + "chef kermit"}>
                 <img
-                  src={"../images/Kermit_Chef.jpg"}
+                  src={"/images/Kermit_Chef.jpg"}
                   alt="kermit the frog as chef"
                 />
                 <div className="chef-description">
@@ -71,7 +71,7 @@ function Home() {
               </div>
               <div ref={chefRefSwedish} className={(swedishOnScreen && "show ") + "chef swedish"}>
                 <img
-                  src={"../images/The_Swedish_Chef.jpg"}
+                  src={"/images/The_Swedish_Chef.jpg"}
                   alt="the swedish chef muppet"
                 />
                 <div className="chef-description">
@@ -81,7 +81,7 @@ function Home() {
               </div>
               <div ref={chefRefMonster} className={(monsterOnScreen && "show ") + "chef monster"}>
                 <img
-                  src={"../images/Cookie_Monster_Chef.jpg"}
+                  src={"/images/Cookie_Monster_Chef.jpg"}
                   alt="the cookie monster as chef"
                 />
                 <div className="chef-description">
